@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  :root {
+    --bg-surface: #FAF9F6;
+    --text-primary: #1B1C1A;
+    --text-secondary: #767872;
+    --border-hairline: #E5E3DC;
+    --border-control: #D6D3CA;
+    --accent-primary: #5A1827;
+    --accent-success: #1B3B2B;
+    --accent-alert: #7C1A22;
+  }
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg-surface);
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #FAF9F6;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #D6D3CA;
+    border-radius: 2px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #767872;
+  }
+}
+
+.font-headline-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-headline-lg {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.font-headline-sm {
+  font-family: 'Playfair Display', Georgia, serif;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 38s linear infinite;
+  will-change: transform;
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse 38s linear infinite;
+  will-change: transform;
+}

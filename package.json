@@ -1,0 +1,21 @@
+{
+  "name": "atelier-monorepo",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "clean": "turbo run clean",
+    "db:migrate": "pnpm --filter @atelier/database db:migrate",
+    "db:seed": "pnpm --filter @atelier/database db:seed",
+    "db:carriers": "pnpm --filter @atelier/database db:carriers",
+    "db:studio": "pnpm --filter @atelier/database db:studio"
+  },
+  "devDependencies": {
+    "@atelier/tsconfig": "workspace:*",
+    "turbo": "^2.4.4",
+    "typescript": "^5.8.2"
+  },
+  "packageManager": "pnpm@11.22.0"
+}

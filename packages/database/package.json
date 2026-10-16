@@ -1,0 +1,33 @@
+{
+  "name": "@atelier/database",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "tsx src/migrate.ts",
+    "db:seed": "tsx src/seeds/dev_seed.ts",
+    "db:carriers": "tsx src/setup_carriers.ts",
+    "db:studio": "drizzle-kit studio",
+    "clean": "rimraf dist"
+  },
+  "dependencies": {
+    "@atelier/contract": "workspace:*",
+    "dotenv": "^16.4.7",
+    "drizzle-orm": "^0.39.3",
+    "postgres": "^3.4.5"
+  },
+  "devDependencies": {
+    "@atelier/tsconfig": "workspace:*",
+    "@types/node": "^22.13.9",
+    "drizzle-kit": "^0.30.4",
+    "rimraf": "^6.0.1",
+    "tsup": "^8.4.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}

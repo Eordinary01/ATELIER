@@ -1,0 +1,16 @@
+{
+  "name": "ATELIER Haute Couture",
+  "short_name": "ATELIER",
+  "description": "Editorial apparel and bespoke wardrobe essentials constructed in New Delhi.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FAF9F6",
+  "theme_color": "#1B1C1A",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    }
+  ]
+}
