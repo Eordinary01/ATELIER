@@ -103,7 +103,7 @@ DATABASE_URL="postgres://user:password@hostname/dbname?sslmode=require" pnpm --f
 2. Select **Root Directory**: `apps/storefront`.
 3. In **Build Settings**, set:
    - **Framework Preset**: Next.js
-   - **Build Command**: `pnpm --filter @atelier/tokens build && pnpm --filter @atelier/contract build && pnpm --filter @atelier/storefront build`
+   - **Build Command**: `pnpm --filter @atelier/tokens build && pnpm --filter @atelier/ui build && pnpm --filter @atelier/contract build && pnpm --filter @atelier/storefront build`
    - **Install Command**: `pnpm install`
 4. Add Environment Variables:
    - `NEXT_PUBLIC_API_URL`: `https://api.atelier.in`
@@ -112,7 +112,11 @@ DATABASE_URL="postgres://user:password@hostname/dbname?sslmode=require" pnpm --f
 #### B. Deploy Admin Studio (`apps/admin`):
 1. Import the same repository as a new Vercel project.
 2. Select **Root Directory**: `apps/admin`.
-3. Add Environment Variables:
+3. In **Build Settings**, set:
+   - **Framework Preset**: Next.js
+   - **Build Command**: `pnpm --filter @atelier/tokens build && pnpm --filter @atelier/ui build && pnpm --filter @atelier/contract build && pnpm --filter @atelier/admin build`
+   - **Install Command**: `pnpm install`
+4. Add Environment Variables:
    - `NEXT_PUBLIC_API_URL`: `https://api.atelier.in`
    - `NEXT_PUBLIC_ADMIN_URL`: `https://admin.atelier.in`
 
